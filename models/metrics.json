@@ -1,0 +1,44 @@
+{
+  "project_version": "1.0.0",
+  "dataset_rows_raw": 110527,
+  "dataset_columns_raw": 14,
+  "dataset_rows_after_cleaning": 110526,
+  "no_show_rate": 0.20193438647919945,
+  "split": {
+    "train": 77368,
+    "validation": 16579,
+    "test": 16579,
+    "strategy": "chronological by AppointmentDay"
+  },
+  "features": [
+    "Age", "gender_male", "waiting_days", "scheduled_hour",
+    "scheduled_day_of_week", "appointment_day_of_week", "appointment_month",
+    "is_weekend", "Scholarship", "Hipertension", "Diabetes", "Alcoholism",
+    "Handcap", "SMS_received"
+  ],
+  "best_model": "hist_gradient_boosting",
+  "models": {
+    "logistic_regression": {
+      "test": {"threshold": 0.53, "precision": 0.2671, "recall": 0.6706, "f1": 0.3820, "roc_auc": 0.6685, "pr_auc": 0.2806}
+    },
+    "random_forest": {
+      "test": {"threshold": 0.41, "precision": 0.2766, "recall": 0.7520, "f1": 0.4044, "roc_auc": 0.7230, "pr_auc": 0.3109}
+    },
+    "hist_gradient_boosting": {
+      "test": {"threshold": 0.50, "precision": 0.2787, "recall": 0.7595, "f1": 0.4078, "roc_auc": 0.7273, "pr_auc": 0.3251}
+    }
+  },
+  "sms_analysis": {
+    "no_show_rate_no_sms": 0.16703533926762965,
+    "no_show_rate_sms": 0.27574544839637,
+    "absolute_difference": 0.10871010912874035,
+    "relative_difference": 0.6508210155131384,
+    "z_statistic": 42.031539707968875,
+    "p_value": 0.0
+  },
+  "data_quality": {
+    "raw_duplicates": 0,
+    "age_invalid_removed": 1,
+    "missing_values": {}
+  }
+}
