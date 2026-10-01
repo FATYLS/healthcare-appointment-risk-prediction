@@ -1,0 +1,11 @@
+pandas>=2.2
+numpy>=1.26
+scipy>=1.13
+scikit-learn>=1.5
+joblib>=1.4
+fastapi>=0.115
+uvicorn[standard]>=0.30
+streamlit>=1.38
+pydantic>=2.9
+matplotlib>=3.9
+pytest>=8.3
